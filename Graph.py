@@ -6,6 +6,7 @@
 
 import pandas as pd
 import numpy as np
+import matplotlib as plt
 
 
 # In[2]:
@@ -122,8 +123,14 @@ merged_data_frame = merged_data_frame.dropna(axis=0)
 merged_data_frame
 
 
-# In[ ]:
+# In[20]:
 
 
-
+# merged_data_frame.plot.bar
+df= merged_data_frame.round()
+l = df.groupby(['Rating', "Sentiment"]).size()
+l
+index = [ "Positive"]
+a = pd.DataFrame(l)
+a
 
